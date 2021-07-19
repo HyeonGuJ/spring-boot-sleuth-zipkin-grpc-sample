@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: publicService
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411
+    service:
+      name: publicService
+  task:
+    execution:
+      pool:
+        core-size: 8
+        max-size: 8
